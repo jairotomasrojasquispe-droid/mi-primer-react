@@ -127,7 +127,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <nav style={{ display: "flex", gap: 12, padding: 8 }}>
-        <Link to="/">Inicio</Link>
+        <Link to="/">Inicios</Link>
         <Link to="/about">Acerca</Link>
         <Link to="/posts">Posts</Link>
         <ThemeToggle />
