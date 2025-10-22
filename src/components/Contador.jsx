@@ -1,16 +1,17 @@
-import { useContador } from "../hooks/useContador";
+import React, { useState } from 'react'
 
-function Contador() {
-  const { contador, incrementar, decrementar, resetear } = useContador(5);
+export default function Contador() {
+  const [valor, setValor] = useState(0)
+  const incrementar = () => setValor(v => v + 1)
+  const decrementar = () => setValor(v => v - 1)
+  const reset = () => setValor(0)
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h2>Contador: {contador}</h2>
-      <button onClick={incrementar}>+</button>
-      <button onClick={decrementar}>-</button>
-      <button onClick={resetear}>Reset</button>
+    <div>
+      <h2>Contador: {valor}</h2>
+      <button onClick={incrementar}>+1</button>
+      <button onClick={decrementar}>-1</button>
+      <button onClick={reset}>Reset</button>
     </div>
-  );
+  )
 }
-
-export default Contador;
