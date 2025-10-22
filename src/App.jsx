@@ -101,7 +101,7 @@ function App() {
 }*/
 
 
-// App.jsx
+/*// App.jsx
 import { UsuarioProvider } from './context/UsuarioContext';
 import Perfil from './components/Perfil';
 import Contador from './components/Contador';
@@ -114,6 +114,32 @@ function App() {
       <Contador />
     </UsuarioProvider>
   );
+}*/
+
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Posts from "./pages/Posts";
+import ThemeToggle from "./components/ThemeToggle";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <nav style={{ display: "flex", gap: 12, padding: 8 }}>
+        <Link to="/">Inicio</Link>
+        <Link to="/about">Acerca</Link>
+        <Link to="/posts">Posts</Link>
+        <ThemeToggle />
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/posts" element={<Posts />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App;
+
+//export default App;

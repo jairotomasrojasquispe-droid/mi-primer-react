@@ -1,0 +1,4 @@
+:root { color-scheme: light; background: #fff; color: #111; }
+:root[data-theme="dark"] { color-scheme: dark; background: #121212; color: #eee; }
+nav a { text-decoration: none; }
+button { padding: .4rem .7rem; }
