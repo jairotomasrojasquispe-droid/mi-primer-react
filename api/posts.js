@@ -29,6 +29,9 @@ export default async function handler(req, res) {
     return res.status(204).end();
   }
 
-  res.setHeader("Allow", ["GET", "POST", "DELETE"]);
+  res.setHe
+  
+  
+  ader("Allow", ["GET", "POST", "DELETE"]);
   return res.status(405).end(`Method ${method} Not Allowed`);
 }
